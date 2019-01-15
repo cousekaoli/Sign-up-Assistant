@@ -1,0 +1,48 @@
+<view>
+  <view class='row'>
+    <label class='title'>标题</label>
+    <view class='info'><input class="in" bindinput="handleTitle"placeholder="请填写活动标题" /></view>
+  </view>
+  <view class='row'>
+    <label class='title'>活动地址</label>
+    <view class='info' bindtap='handleAddressClick'>{{address}}</view>
+  </view>
+  <view class='row'>
+    <label class='title'>活动类型</label>
+    <view class='info'>
+    <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+  </label>
+</checkbox-group>
+    </view>
+  </view>
+  <view class='row'>
+    <label class='title'>参与人数</label>
+    <view class='info'>
+      <radio-group>
+        <label>
+          <radio value="1" checked="false"/>小于10人
+          <radio value="2" checked="false"/>10-100人
+          <radio value="3" checked="false" class='checkbox1'/>100-1000人
+          <radio value="3" checked="false" class='checkbox1'/>1000人以上
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='row'>
+    <label class='title'>日期</label>
+    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入活动日期'/></view>
+  </view>
+  <view class='row'>
+    <label class='title'>活动内容</label>
+    <view class='info'><input class="in" bindinput="handleContent"placeholder='请输入活动相关内容说明'/></view>
+  </view>
+  <view class='row'>
+    <label class='title'>联系方式</label>
+    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系方式'/></view>
+  </view>
+  <view class="submit-button" bindtap='handleSubmit'>发布活动</view>
+
+</view>

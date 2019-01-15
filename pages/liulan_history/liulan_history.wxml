@@ -1,0 +1,4 @@
+<!--pages/liulan_history/liulan_history.wxml-->
+<view class='container'>
+    <text>暂无浏览记录</text>
+</view>

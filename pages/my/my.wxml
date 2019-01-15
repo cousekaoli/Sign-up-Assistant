@@ -1,0 +1,39 @@
+<view class="main">
+    <view class="header" >
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/liulan_history/liulan_history">
+             <image src='/resources/history.png' class='icon'></image>浏览历史         </navigator>
+        </view>
+        
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+          <navigator url="/pages/publish_history/publish_history">
+            <image src='/resources/publish.png' class='icon'></image>我发起的活动        </navigator>
+        </view>
+        
+    </view>
+    <view class="address-box">
+        
+        <view class="address-manage">
+            
+            <navigator url="/pages/join_history/join_history">
+            <image src='/resources/join.png' class='icon'></image>
+            我参与的活动</navigator>
+        </view>
+        
+    </view>
+     <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/setting/setting">
+             <image src='/resources/setting.png' class='icon'></image>
+            设置</navigator>
+        </view>
+        
+    </view>
+   
+</view>

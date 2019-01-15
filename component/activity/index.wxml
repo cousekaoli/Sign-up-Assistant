@@ -1,0 +1,18 @@
+<!--component/activity/avtivity.wxml-->
+<view class='container'>
+    <view class='title'>
+        <text>{{act_title}}</text>
+    </view>
+    
+    <view class='content'>
+        <text>{{act_content}}</text>
+    </view>
+    
+    <view class='publisher'>
+        <text>{{act_publisher}}</text>
+    </view>
+    
+    <view class='date'>
+        <text>{{act_date}}</text>
+    </view>
+</view>

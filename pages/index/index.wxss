@@ -1,0 +1,38 @@
+/**index.wxss**/
+.map-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+}
+.map{
+  width: 100%;
+  height: 100%;
+}
+.btns{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 50px;
+  background:#3498DB;
+  display: flex;
+}
+
+.search{
+    padding: 10rpx;
+}
+.search-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rpx;
+    color: #aaa;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 20rpx;
+}
+.search-text icon{
+    margin-right: 10rpx;
+}

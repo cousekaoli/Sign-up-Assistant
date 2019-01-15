@@ -1,0 +1,23 @@
+<view class='map-container'>
+<view class="search">
+        <navigator url="search/search">
+            <view class="search-text">
+                <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+                搜索活动信息
+            </view>
+        </navigator>
+    </view>
+<map
+  id='map'
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="14"
+  bindmarkertap="markertap"
+  show-location
+  class='map'
+  controls='{{controls}}'
+  bindcontroltap="controltap"
+></map>
+</view>
+<view class='btns'>
+</view>

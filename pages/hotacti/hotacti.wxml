@@ -1,0 +1,9 @@
+<!--pages/hotacti/hotacti.wxml-->
+<view>
+    <activity act_title="活动标题1" act_content="活动内容1" act_publisher="活动发起人1" act_date="2019.1.1"/>
+    <activity act_title="活动标题2" act_content="活动内容2" act_publisher="活动发起人2" act_date="2019.1.2"/>
+    <activity act_title="活动标题3" act_content="活动内容3" act_publisher="活动发起人3" act_date="2019.1.3"/>
+    <activity act_title="活动标题4" act_content="活动内容4" act_publisher="活动发起人4" act_date="2019.1.5"/>
+    <activity act_title="活动标题5"/>
+    <activity act_title="活动标题6"/><activity act_title="活动标题7"/><activity act_title="活动标题8"/><activity act_title="活动标题9"/><activity act_title="活动标题10"/><activity act_title="活动标题11"/><activity act_title="活动标题12"/><activity act_title="活动标题13"/><activity act_title="活动标题14"/><activity act_title="活动标题15"/><activity act_title="活动标题16"/><activity act_title="活动标题17"/><activity act_title="活动标题"/><activity act_title="活动标题5"/><activity act_title="活动标题5"/><activity act_title="活动标题5"/><activity act_title="活动标题5"/><activity act_title="活动标题5"/>
+</view>
