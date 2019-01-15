@@ -1,0 +1,16 @@
+<!-- 用户页面-->
+<view class="container">
+  <!--显示图像-->
+  <view class="avatar"> 
+    <image src="/common/images/userImageTest.jpg" />
+  </view>
+  <!--显示昵称-->
+  <view class="name"> 二哈</view>
+  <!--信息栏-->
+  <view class="item" bindtap="alterImage" >
+    <text>修改程序头像</text>
+  </view>
+   <view class="item" bindtap="alterName">
+    <text>修改程序昵称</text>
+  </view>
+</view>

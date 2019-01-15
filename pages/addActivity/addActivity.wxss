@@ -1,0 +1,146 @@
+/*整个背景和图片的配置*/
+.imageStyle{
+  height: 150px;
+  width: 750rpx;
+}
+.signForStyle{
+  background-color:#EDEDED;
+  width: 750rpx;
+  min-height: 100%;
+}
+
+/*整个表单的样式*/
+.formStyle{
+  margin-top: -50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*表单1的样式*/
+.box1{
+  display: flex;
+  flex-direction: column;
+  background-color:#FFF;
+  border:soli #FFF 1px;
+  border-radius: 20rpx; 
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+}
+.box1 input{
+  flex-grow: 1;
+  margin: 15rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #DDD;
+  font-size:15px;
+  padding: 10rpx;
+}
+.box1 textarea{
+  flex-grow: 2;
+  margin:  15rpx;
+  font-size: 12px;
+  height: 120rpx;
+  padding: 8rpx
+}
+
+/*表单2的样式*/
+.box2{
+  display: flex;
+  flex-direction: column;
+  background-color:#FFF;
+  border:soli #FFF 1px;
+  border-radius: 20rpx; 
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+/*时间*/
+.box1for2{
+  margin: 15rpx;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #DDD;
+}
+.box1for2 text{
+  display:inline-block;
+  font-size: 15px;
+}
+.box1for2 picker{
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+/*地图*/
+.box2for2{
+  margin: 15rpx;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #DDD;
+  font-size: 15px;
+}
+/*权限*/
+.box3for2{
+  margin: 5rpx;
+  padding: 10rpx;
+}
+.box3for2 text{
+  display:inline-block;
+  font-size: 15px;
+  margin-left: 10rpx;
+}
+.box3for2 switch{
+  display: inline-block;
+  margin-left: 280rpx;
+  margin-right: 30rpx;
+}
+.box3for2 input{
+  margin: 15rpx;
+  border-bottom: 1rpx solid #DDD;
+  font-size:15px;
+  padding: 15rpx;
+}
+/*必填信息*/
+.box4for2{
+  margin: 15rpx;
+  padding: 10rpx;
+} 
+.box4for2 text{
+  display: block;
+  font-size: 15px;
+  margin-bottom: 20rpx;
+}
+.box4for2 block{
+  display: flex;
+  flex-wrap: wrap;
+}
+.box4for2  .notSelected{
+  display:inline-block;
+  font-size: 16px;
+  margin: 10rpx;
+  padding: 10rpx;
+  border: solid 2rpx #DDD;
+  border-radius: 20rpx;
+  background-color: #EDEDED;
+}
+.box4for2 .selected{
+  display:inline-block;
+  font-size: 16px;
+  margin: 10rpx;
+  padding: 10rpx;
+  border: solid 2rpx #DDD;
+  border-radius: 20rpx;
+  background-color:#32CD32;
+  color: white;
+}
+
+.box3{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  background-color: #32CD32;
+  color:white;
+  border-radius: 20rpx;  
+}
+

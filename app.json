@@ -1,0 +1,40 @@
+{
+  "pages":[
+           "pages/index/index",
+           "pages/user/user",
+           "pages/history/history",
+           "pages/addActivity/addActivity",
+           "component/item/item",
+           "pages/takePart/takePart"
+           ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7ED321",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "HUST报名小助手",
+    "backgroundColor": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"pages/history/history",
+        "text": "历史",
+        "iconPath": "common/images/history1.png",
+        "selectedIconPath": "common/images/history2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "添加",
+        "iconPath": "common/images/add1.png",
+        "selectedIconPath": "common/images/add2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "common/images/user1.png",
+        "selectedIconPath": "common/images/user2.png"
+      }
+    ]
+  }
+}

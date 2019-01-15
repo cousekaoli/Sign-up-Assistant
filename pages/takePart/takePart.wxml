@@ -1,0 +1,49 @@
+<page> <!--页面显示-->
+<view class="backgroundStyle">
+  <image src="/common/images/signForImage.jpg" class="imageStyle"/>
+  <view class="infoStyle">
+  <!--活动主题与内容-->
+  <view class="allBox box1">
+    <text style='font-size: 16px;font-weight: bold;text-align: center;'>test</text>
+    <text >test1 test1 test1 test1  test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 </text>
+  </view>
+  <!--活动细节-->
+  <view class="allBox">
+    <view class="box2">
+      <text style="font-size: 16px;font-weight: bold;">活动须知</text>
+      <!--后期绑定数据显示-->
+      <text>活动开始时间：2019-08-16 12:00</text>
+      <text>报名截止时间：2019-08-15 12:00</text>
+      <text>活动地址：华中科技大学东校区东十二教学楼 </text>
+      <text>活动参加人数：0/1200</text>
+      <text>活动已设置权限</text>
+      <text>活动状态：正在进行/已过期/已删除</text>
+      <text>活动审核状态：审核中/通过审核/未通过审核</text>
+      <text>导出报名信息</text> <!--对活动发起者可见-->
+    </view>
+    <view class="statusImage"><!-- 留插图的地方-->
+      <icon type='success' size='80rpx'></icon>
+    </view>
+  </view>
+
+  <!--对活动的操作按钮 邀请好友参加/修改活动信息/取消活动-->
+  <button class="buttonStyle box3">邀请好友参加</button>
+  <view class="box4">
+    <button class="buttonStyle" plain='true' plain style="color: #32CD32; border-color: #32CD32;">取消活动</button>
+    <button class="buttonStyle" plain='true' plain style="color: #32CD32; border-color: #32CD32;">修改活动信息</button>
+  </view>
+
+  <!--报名信息填写-->
+  <view class="allBox box5">
+    <text>请填写报名信息：</text>
+    <input placeholder='姓名'></input> <!-- 使用数组-->
+    <input placeholder='手机号'></input>
+    <button >确认报名</button> 
+    <!--取消报名（在填写以后） 修改报名（也在填写以后）后面加上-->
+  </view>
+
+ 
+
+  </view>
+</view>
+</page>

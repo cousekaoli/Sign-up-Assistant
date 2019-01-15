@@ -1,0 +1,50 @@
+<page> <!--页面显示-->
+<view class="signForStyle">
+  <image src="/common/images/signForImage.jpg" class="imageStyle"/>
+  <form class="formStyle">
+    <view class="box1">
+    <input placeholder="活动主题（必填）" bindblur="activityTitle"/>
+    <textarea placeholder="请输入活动说明，如时间、人员要求、费用等"   bindblur='activityContent'></textarea>
+    </view>
+    
+<view class="box2">
+  <view class="box1for2">
+  <text >活动开始时间：</text>
+    <picker mode="date"  value="{{dateSet1.selectDate}}" start="{{dateSet1.startDate}}" end="{{dateSet1.endDate}}" field="day" style='display:inline-block;' bindchange="chooseDate" data-id="1" >{{dateSet1.selectDate}}</picker>
+    <picker mode="time" value="{{timeSet1.selectTime}}" start="{{timeSet1.startTime}}" end="{{timeSet1.endTime}}" style='display:inline-block;' bindchange='chooseTime' data-id="1">{{timeSet1.selectTime}}</picker>
+  </view>
+
+  <view class="box1for2">
+  <text >报名截止时间：</text>
+    <picker mode="date"  value="{{dateSet2.selectDate}}" start="{{dateSet2.startDate}}" end="{{dateSet2.endDate}}" field="day" style='display:inline-block;' bindchange='chooseDate' data-id="2" >{{dateSet2.selectDate}}</picker>
+    <picker mode="time" value="{{timeSet2.selectTime}}" start="{{timeSet2.startTime}}" end="{{timeSet2.endTime}}" style='display:inline-block;' bindchange='chooseTime' data-id="2">{{timeSet2.selectTime}}</picker>
+  </view>
+
+  <view class="box2for2" catchtap='handleAddressClick'>{{location.address}}</view>
+
+  <view class="box3for2">
+    <text>限制报名人数</text>
+    <switch  bindchange="changeNum"></switch>
+    <input wx:if="{{isLimitNum}}" placeholder="填写参与活动的最大人数" bindblur="selectMaxNum"></input>
+  </view>
+  
+  <view class="box3for2">
+   <text>是否设置权限</text>
+   <switch bindchange="changePrivate"></switch>
+   <input wx:if="{{isPrivate}}" placeholder="请填写密码" bindblur="selectPassword"></input>
+  </view>
+
+  <view class="box4for2">
+    <text>选择报名所需要填写的信息</text>
+    <block wx:for="{{infoNeed}}" wx:kye="id">
+     <view  bindtap='infoSelected' data-info-index="{{index}}" style='display: inline-block;'>
+      <text class="{{infoNeed[index].tag? 'selected': 'notSelected'}}">{{infoNeed[index].id}}</text>
+    </view> 
+    </block>
+  </view>
+  </view>
+
+  <button  class="box3" bindtap='creat'>发布</button>
+  </form>
+</view>
+</page>

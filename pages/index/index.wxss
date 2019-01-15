@@ -1,0 +1,8 @@
+.buttonStyle{
+  display: block;
+  margin-top: 200rpx;
+  margin-left: 80rpx;
+  margin-right: 80rpx;
+  background: "#7ED321";
+  border-radius: 10rpx;
+}

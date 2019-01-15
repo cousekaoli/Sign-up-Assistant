@@ -1,0 +1,6 @@
+<view class="box1">
+  <view class="empty">
+      <text class="title">暂无历史活动</text>
+      <text class="content">请您前往「添加」添加活动</text>
+    </view>
+</view>
