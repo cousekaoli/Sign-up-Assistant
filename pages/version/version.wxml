@@ -1,0 +1,7 @@
+<!--pages/version/version.wxml-->
+<view>
+<icon type="search" size="17"/>
+  <text class='t1'>活动报名小助手\n</text>
+<icon type="waiting" size="17"/>
+  <text class='t1'>版本：1.0.0</text>
+</view>

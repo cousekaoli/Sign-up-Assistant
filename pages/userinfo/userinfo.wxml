@@ -1,0 +1,35 @@
+<view>
+  <view class='row'>
+    <label class='title'>用户昵称</label>
+    <view class='info'><input class="in" bindinput="handleTitle"placeholder="请填写用户昵称" /></view>
+  </view>
+  <view class='row'>
+    <label class='title'>个人地址</label>
+    <view class='info' bindtap='handleAddressClick'>个人地址</view>
+  </view>
+  <view class='row'>
+    <label class='title'>最高学历</label>
+    <view class='info'>
+      <radio-group>
+        <label>
+          <radio value="3" checked="false" class='checkbox1'/>高中
+          <radio value="3" checked="false" class='checkbox1'/>本科
+          <radio value="3" checked="false" class='checkbox1'/>硕士
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='row'>
+    <label class='title'>工作单位</label>
+    <view class='info'><input class="in" placeholder='请输入当前工作单位'/></view>
+  </view>
+  <view class='row'>
+    <label class='title'>职业</label>
+    <view class='info'><input class="in" bindinput="handleContent"placeholder='请输入当前从事职业'/></view>
+  </view>
+  <view class='row'>
+    <label class='title'>联系方式</label>
+    <view class='info'><input class="in" bindinput='handleContact' placeholder='请输入联系方式'/></view>
+  </view>
+  <view class="submit-button" bindtap='handleSubmit'>保存</view>
+</view>

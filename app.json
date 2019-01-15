@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/publish/publish",
+    "pages/userinfo/userinfo",
+    "pages/my/my",
+    "pages/setting/setting",
+    "pages/index/search/search",
+    "pages/hotacti/hotacti",
+    "pages/version/version",
+    "pages/systemInfo/systemInfo",
+    "pages/details/details",
+    "pages/publish_history/publish_history",
+    "pages/join_history/join_history",
+    "pages/liulan_history/liulan_history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3498DB",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resources/index_t.png",
+        "selectedIconPath": "resources/index.png"
+      },
+      {
+        "pagePath": "pages/hotacti/hotacti",
+        "text": "热门活动",
+        "iconPath": "resources/hot_t.png",
+        "selectedIconPath": "resources/hot.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发起活动",
+        "iconPath": "resources/add_t.png",
+        "selectedIconPath": "resources/add.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "resources/my_t.png",
+        "selectedIconPath": "resources/my.png"
+      }
+    ]
+  }
+}

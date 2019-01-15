@@ -1,0 +1,26 @@
+/* component/activity/avtivity.wxss */
+.container{
+  border: 2rpx solid gray;
+  margin: 8rpx;
+  box-shadow:3rpx 3rpx 3rpx 3rpx gray;
+  border-radius: 15rpx;
+  
+}
+.title{
+  font-size: 35rpx;
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+  border-bottom:4rpx solid gray;
+  text-align:center
+}
+.content{
+  height: 260rpx
+}
+.publisher{
+  border-top: 3rpx solid gray;
+  text-align:right;
+  font-size:30rpx;
+}
+.date{
+  text-align:right;
+  font-size:30rpx;
+}
