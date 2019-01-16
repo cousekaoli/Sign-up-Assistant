@@ -1,4 +1,4 @@
-package com.hust.wxback.service.support;
+package com.hust.wxback.business.base;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

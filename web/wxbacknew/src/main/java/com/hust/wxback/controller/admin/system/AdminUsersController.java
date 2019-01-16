@@ -2,17 +2,13 @@ package com.hust.wxback.controller.admin.system;
 
 import com.hust.wxback.common.JsonResult;
 import com.hust.wxback.controller.BaseController;
-import com.hust.wxback.entity.User;
-import com.hust.wxback.service.IUserService;
+import com.hust.wxback.business.user.User;
+import com.hust.wxback.business.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 
 @Controller

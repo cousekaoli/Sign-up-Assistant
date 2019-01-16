@@ -1,11 +1,8 @@
-package com.hust.wxback.service.impl;
+package com.hust.wxback.business.user;
 
-import com.hust.wxback.dao.support.IBaseDao;
-import com.hust.wxback.entity.User;
-import com.hust.wxback.service.IUserService;
-import com.hust.wxback.service.support.impl.BaseServiceImpl;
+import com.hust.wxback.business.base.IBaseDao;
+import com.hust.wxback.business.base.BaseServiceImpl;
 import com.hust.wxback.common.utils.MD5Utils;
-import com.hust.wxback.dao.IUserDao;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,9 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * <p>

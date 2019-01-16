@@ -1,6 +1,6 @@
 package com.hust.wxback.controller.admin.system;
 
-import com.hust.wxback.entity.User;
+import com.hust.wxback.business.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

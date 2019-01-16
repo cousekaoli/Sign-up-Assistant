@@ -3691,7 +3691,7 @@ FTL stack trace ("~" means nesting-related):
 2019-01-15 19:22:20.260 [restartedMain] DEBUG org.hibernate.SQL - alter table tb_role_resource add constraint FK7ffc7h6obqxflhj1aq1mk20jk foreign key (role_id) references tb_role (id)
 2019-01-15 19:22:20.372 [restartedMain] DEBUG org.hibernate.SQL - alter table tb_user_role add constraint FKea2ootw6b6bb0xt3ptl28bymv foreign key (role_id) references tb_role (id)
 2019-01-15 19:22:20.473 [restartedMain] DEBUG org.hibernate.SQL - alter table tb_user_role add constraint FK7vn3h53d0tqdimm8cp45gc0kl foreign key (user_id) references tb_user (id)
-2019-01-15 19:22:20.717 [restartedMain] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.service.IUserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-15 19:22:20.717 [restartedMain] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.business.user.IUserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2019-01-15 19:22:20.718 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
 2019-01-15 19:22:20.718 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service Tomcat
 2019-01-15 19:22:20.960 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
@@ -3702,12 +3702,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field userService in com.hust.wxback.controller.admin.system.UserController required a bean of type 'com.hust.wxback.service.IUserService' that could not be found.
+Field userService in com.hust.wxback.controller.admin.system.UserController required a bean of type 'com.hust.wxback.business.user.IUserService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.hust.wxback.service.IUserService' in your configuration.
+Consider defining a bean of type 'com.hust.wxback.business.user.IUserService' in your configuration.
 
 2019-01-15 19:22:30.015 [restartedMain] INFO  com.hust.wxback.WxbackApplication - Starting WxbackApplication on DESKTOP-7GFN2EQ with PID 11580 (E:\javaWeb\wxback\target\classes started by kuangnan in E:\javaWeb\wxback)
 2019-01-15 19:22:30.018 [restartedMain] DEBUG com.hust.wxback.WxbackApplication - Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
@@ -3879,7 +3879,7 @@ Consider defining a bean of type 'com.hust.wxback.service.IUserService' in your 
 2019-01-15 19:30:44.381 [main] DEBUG org.hibernate.SQL - alter table tb_user_role add constraint FK7vn3h53d0tqdimm8cp45gc0kl foreign key (user_id) references tb_user (id)
 2019-01-15 19:30:46.911 [main] INFO  com.hust.wxback.dao.IUserDaoTest - Started IUserDaoTest in 9.365 seconds (JVM running for 10.551)
 2019-01-15 19:30:46.987 [main] ERROR org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6b16de91] to prepare test instance [com.hust.wxback.dao.IUserDaoTest@71bb8b34]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.hust.wxback.dao.IUserDaoTest': Unsatisfied dependency expressed through field 'ibaseDao'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.dao.support.IBaseDao<?, ?>' available: expected single matching bean but found 3: IRoleDao,IUserDao,IResourceDao
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.hust.wxback.dao.IUserDaoTest': Unsatisfied dependency expressed through field 'ibaseDao'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.business.base.IBaseDao<?, ?>' available: expected single matching bean but found 3: IRoleDao,IUserDao,IResourceDao
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
@@ -3909,7 +3909,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.dao.support.IBaseDao<?, ?>' available: expected single matching bean but found 3: IRoleDao,IUserDao,IResourceDao
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.hust.wxback.business.base.IBaseDao<?, ?>' available: expected single matching bean but found 3: IRoleDao,IUserDao,IResourceDao
 	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:173)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)

@@ -1,8 +1,8 @@
-package com.hust.wxback.service.support.impl;
+package com.hust.wxback.business.base;
 
-import com.hust.wxback.entity.support.BaseEntity;
-import com.hust.wxback.dao.support.IBaseDao;
-import com.hust.wxback.service.support.IBaseService;
+import com.hust.wxback.business.base.BaseEntity;
+import com.hust.wxback.business.base.IBaseDao;
+import com.hust.wxback.business.base.IBaseService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

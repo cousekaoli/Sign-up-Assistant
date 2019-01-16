@@ -1,7 +1,6 @@
-package com.hust.wxback.service;
+package com.hust.wxback.business.user;
 
-import com.hust.wxback.entity.User;
-import com.hust.wxback.service.support.IBaseService;
+import com.hust.wxback.business.base.IBaseService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 

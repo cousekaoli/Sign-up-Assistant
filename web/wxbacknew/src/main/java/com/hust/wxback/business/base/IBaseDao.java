@@ -1,6 +1,5 @@
-package com.hust.wxback.dao.support;
+package com.hust.wxback.business.base;
 
-import com.hust.wxback.entity.support.BaseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;

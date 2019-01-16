@@ -1,8 +1,8 @@
 package com.hust.wxback.controller.web;
 
-import com.hust.wxback.service.IUserService;
+import com.hust.wxback.business.user.IUserService;
 import com.hust.wxback.controller.BaseController;
-import com.hust.wxback.entity.User;
+import com.hust.wxback.business.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

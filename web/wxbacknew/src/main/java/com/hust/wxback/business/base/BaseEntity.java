@@ -1,4 +1,4 @@
-package com.hust.wxback.entity.support;
+package com.hust.wxback.business.base;
 
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;

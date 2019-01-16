@@ -1,7 +1,7 @@
-package com.hust.wxback.entity;
+package com.hust.wxback.business.user;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.hust.wxback.entity.support.BaseEntity;
+import com.hust.wxback.business.base.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Date;

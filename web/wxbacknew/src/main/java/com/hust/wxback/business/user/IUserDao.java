@@ -1,7 +1,6 @@
-package com.hust.wxback.dao;
+package com.hust.wxback.business.user;
 
-import com.hust.wxback.dao.support.IBaseDao;
-import com.hust.wxback.entity.User;
+import com.hust.wxback.business.base.IBaseDao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
