@@ -1,26 +1,40 @@
 /* component/activity/avtivity.wxss */
 .container{
-  border: 2rpx solid gray;
-  margin: 8rpx;
-  box-shadow:3rpx 3rpx 3rpx 3rpx gray;
-  border-radius: 15rpx;
-  
+  border: 1rpx solid white;
+  margin: 30rpx;
+  margin-top: 0rpx;
+  background-color: white
 }
 .title{
   font-size: 35rpx;
   font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
-  border-bottom:4rpx solid gray;
-  text-align:center
+  border-bottom:1rpx solid #F5F5F5;
+  text-align:center;
 }
 .content{
-  height: 260rpx
+  height: 150rpx
 }
 .publisher{
-  border-top: 3rpx solid gray;
-  text-align:right;
+  border-top: 1rpx solid #F5F5F5;
+  font-size:30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon{
+      
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right; 
+ 
   font-size:30rpx;
 }
-.date{
-  text-align:right;
-  font-size:30rpx;
+.like{
+  display: flex;
+  justify-content: right
 }
+
+
+
+

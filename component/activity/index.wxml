@@ -1,5 +1,5 @@
 <!--component/activity/avtivity.wxml-->
-<view class='container'>
+<view class='container' bindtap="details">
     <view class='title'>
         <text>{{act_title}}</text>
     </view>
@@ -10,9 +10,20 @@
     
     <view class='publisher'>
         <text>{{act_publisher}}</text>
+        <text space="nbsp">                                   活动参与人数:</text>
+        <text>{{act_join}}
+         </text>
+    </view>
+    <view>
+    <view class='icon'>
+        
+        <view class='date'>        
+         <text>{{act_date}}</text>
+        </view>
+      <view>      
+      <like count="{{act_like}}" class="like"/>
+     </view>  
     </view>
     
-    <view class='date'>
-        <text>{{act_date}}</text>
     </view>
 </view>

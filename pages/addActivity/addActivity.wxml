@@ -1,0 +1,56 @@
+<page> <!--页面显示-->
+<view class="signForStyle">
+  <image src="/resources/signForImage.jpg" class="imageStyle"/>
+  <form class="formStyle">
+    <view class="box1">
+    <input placeholder="活动主题（必填）" value='{{activity.activityHead.title}}' bindblur="activityTitle"></input>
+    <textarea placeholder="请输入活动说明，如时间、人员要求、费用等"   bindblur='activityContent' value='{{activity.activityHead.content}}'></textarea>
+    </view>
+    
+<view class="box2">
+  <view class="box1for2">
+  <text>活动类型：</text>
+  <picker  style='padding-left:58rpx;' mode="selector" range="{{activity.activityHead.type}}" value="{{activity.activityHead.selectedIndex}}" bindchange='chooseActivityType'>{{activity.activityHead.type[activity.activityHead.selectedIndex]}}</picker>
+  </view>
+
+  <view class="box1for2">
+  <text >活动开始时间：</text>
+    <picker mode="date"  value="{{dateSet1.selectDate}}" start="{{dateSet1.startDate}}" end="{{dateSet1.endDate}}" field="day" style='display:inline-block;' bindchange="chooseDate" data-id="1" >{{dateSet1.selectDate}}</picker>
+    <picker mode="time" value="{{timeSet1.selectTime}}" start="{{timeSet1.startTime}}" end="{{timeSet1.endTime}}" style='display:inline-block;' bindchange='chooseTime' data-id="1">{{timeSet1.selectTime}}</picker>
+  </view>
+
+  <view class="box1for2">
+  <text >报名截止时间：</text>
+    <picker mode="date"  value="{{dateSet2.selectDate}}" start="{{dateSet2.startDate}}" end="{{dateSet2.endDate}}" field="day" style='display:inline-block;' bindchange='chooseDate' data-id="2" >{{dateSet2.selectDate}}</picker>
+    <picker mode="time" value="{{timeSet2.selectTime}}" start="{{timeSet2.startTime}}" end="{{timeSet2.endTime}}" style='display:inline-block;' bindchange='chooseTime' data-id="2">{{timeSet2.selectTime}}</picker>
+  </view>
+
+  <view class="box2for2" catchtap='handleAddressClick'>{{activity.location.address}}</view>
+
+  <view class="box3for2">
+    <text>限制报名人数</text>
+    <switch  bindchange="changeNum" checked='{{activity.isLimitNum}}'></switch>
+    <input wx:if="{{activity.isLimitNum}}" placeholder="填写参与活动的最大人数" bindblur="selectMaxNum" value='{{activity.maxNum}}'></input>
+  </view>
+  
+  <view class="box3for2">
+   <text>是否设置权限</text>
+   <switch bindchange="changePrivate" checked='{{activity.isPrivate}}'></switch>
+   <input wx:if="{{activity.isPrivate}}" placeholder="请填写密码" bindblur="selectPassword" value='{{activity.actPassword}}'></input>
+  </view>
+
+  <view class="box4for2">
+    <text>选择报名所需要填写的信息</text>
+    <block wx:for="{{activity.infoNeed}}" wx:kye="id">
+     <view  bindtap='infoSelected' data-info-index="{{index}}" style='display: inline-block;'>
+      <text class="{{activity.infoNeed[index].tag? 'selected': 'notSelected'}}">{{activity.infoNeed[index].id}}</text>
+    </view> 
+    </block>
+    <!-- <text class="notSelected">+</text> -->
+  </view>
+  </view>
+
+  <button  class="box3" bindtap='submitActivity'>发布</button>
+  </form>
+</view>
+</page>

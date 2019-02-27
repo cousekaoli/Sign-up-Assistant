@@ -1,0 +1,163 @@
+ /*整个页面和图像的显示 */
+.backgroundStyle{
+  background-color:#EDEDED;
+  width: 750rpx;
+  min-height: 100%;
+}
+.imageStyle{
+  height: 150px;
+  width: 750rpx;
+}
+.infoStyle{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.allBox{
+  background-color:#FFF;
+  border:solid #FFF 1px;
+  border-radius: 20rpx; 
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+  padding: 10rpx;
+  position: relative;
+}
+
+/*活动主题*/
+.box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.box1 text{
+  display: block;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  font-size: 14px;
+}
+/*活动须知*/
+.box2{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 30rpx;
+}
+.box2 text{
+  display: inline-block;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  font-size: 14px;
+}
+.checkTakePart{
+  display: flex;
+  flex-direction: row;
+}
+.checkTakePart image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-left: 380rpx;
+  margin-top: 15rpx;
+}
+.statusImage{
+  width: 110rpx;
+  height: 110rpx;
+  display: block;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+}
+
+/*对活动的操作按钮*/
+.buttonStyle{ /*所有按钮的样式*/
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;  
+}
+ .box3{
+  background-color: #3498DB;
+  color: white;
+  margin-top: 30rpx;
+}
+.box4{ /*对类如何选择?*/
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rpx;
+}
+.box4 button{
+  flex:1;
+}
+
+/*报名信息的填写*/
+.box5{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.box5 text{
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20rpx;
+}
+.box5 input{
+  font-size: 14px;
+  border-bottom: 1rpx dashed #DDD;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+/*报名信息的操作按钮*/
+.box5 .button1{
+  display: inline-block;
+  margin-left: 180rpx;
+  margin-right: 180rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  background-color: #3498DB;
+  color: #FFF;
+}
+.box6{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rpx;
+}
+.box6 button{
+  flex:1;
+  font-size: 14px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 20rpx;
+}
+.box6 .button2{
+  background-color: #3498DB;
+  color: #FFF;
+}
+.box6 .button3{
+  background-color: #cc0000;
+  color: #FFF;
+}
+
+
+
+
+

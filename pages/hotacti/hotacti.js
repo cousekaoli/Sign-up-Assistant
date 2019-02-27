@@ -5,14 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    list: []
+
   },
-  onLoad: function (options) { 
-  
-  },
- 
-    
-  
 
   /**
    * 生命周期函数--监听页面加载
@@ -32,6 +27,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/applet/activity/search',
+      method: "GET",
+      data: {},
+      success: function (res) {
+        console.log(res.data.extend.act)
+        var list = res.data.extend.act
+        if (list == null) {
+          var toastText = '获取数据失败' + res.data.errMsg;
+          wx.showToast({
+            title: toastText,
+            icon: "",
+            duration: 2000
+          });
+        }
+        else {
+          that.setData({
+            list: list
+          });
+        }
+      }
+    })
+
+
+
 
   },
 
@@ -68,5 +89,8 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+
+
 })

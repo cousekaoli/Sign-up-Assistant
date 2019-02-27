@@ -29,6 +29,30 @@ page{
     float: right;
 }
 
+.nickname{
+  font-size: 18px;
+}
+.activityNum{
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.header button{
+  display: inline-block;
+  margin-left: 140rpx;
+  margin-right: 180rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  background-color: #32CD32;
+  color: #FFF;
+}
+
 .address-box{
     border-bottom: 20rpx solid #ededed;
     color: #999;

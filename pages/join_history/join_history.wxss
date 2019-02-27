@@ -1,1 +1,11 @@
 /* pages/join_history/join_history.wxss */
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+
+.weui-form-preview__ft{
+  text-align: center;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}

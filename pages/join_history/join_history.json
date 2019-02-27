@@ -1,5 +1,4 @@
 {
-  "usingComponents": {
-    "history":"../../component/history/index"
-  }
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "我参加的活动"
 }

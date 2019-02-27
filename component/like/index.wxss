@@ -1,0 +1,26 @@
+/* components/like/index.wxss */
+.container{
+  /* background-color: blue */
+    display: inline-flex;
+    flex-direction: row;
+    padding: 10rpx;
+}
+.container image{
+
+  width: 45rpx;
+  height: 45rpx;
+  /* rpx自适应 */
+}
+
+.container text{
+  font-family: "PingFangSC-Thin";
+  font-size: 24rpx;
+  line-height: 24rpx;
+  /* 消除间距 */
+  color: #bbbbbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+
+
+}

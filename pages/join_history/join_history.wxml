@@ -1,3 +1,29 @@
 <!--pages/join_history/join_history.wxml-->
-<history/>
-<history/><history/><history/><history/><history/><history/>
+<view class="page">
+    <block wx:for="{{list}}">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__value_in-hd">{{item.actTitle}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">活动类型</view>
+                    <view class="weui-form-preview__value">{{item.category}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">发起时间</view>
+                    <view class="weui-form-preview__value">{{item.createTime}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">更新时间</view>
+                    <view class="weui-form-preview__value">{{item.updateTime}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <text class='link' bindtap='deleteAct' data-actid='{{item.actId}}' data-acttitle='{{item.actTitle}}'data-index="{{index}}">取消报名</text>
+            </view>
+        </view>
+    </view>
+    </block>
+</view>

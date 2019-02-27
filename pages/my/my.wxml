@@ -1,8 +1,18 @@
 <view class="main">
     <view class="header" >
+      <block wx:if="{{isLogIn}}">
         <image src="{{thumb}}" class="thumb"></image>
         <text class="nickname">{{nickname}}</text>
+        <!-- id便于测试 无用后删除 -->
+        <text class="activityNum">用户id:{{backUserInfo.data.extend.userId}}</text>
+        <text class="activityNum">我的发起：{{addActivityNum}}</text>
+        <text class="activityNum">我的参与：{{takePartNum}}</text>
+      </block>
+      <block wx:else>
+        <button open-type='getUserInfo' bindgetuserinfo='doLogIn'> 点击登录</button>
+      </block>
     </view>
+
     <view class="address-box">
         <view class="address-manage">
             <navigator url="/pages/liulan_history/liulan_history">
@@ -32,6 +42,14 @@
             <navigator url="/pages/setting/setting">
              <image src='/resources/setting.png' class='icon'></image>
             设置</navigator>
+        </view>
+        
+    </view>
+
+    <view class="address-box">
+        <view class="address-manage">
+          <navigator url="/pages/personInfo/personInfo">
+            <image src='/resources/userinfo.png' class='icon'></image>个人资料        </navigator>
         </view>
         
     </view>

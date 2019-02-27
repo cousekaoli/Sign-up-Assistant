@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wxfffccfb0952d64e0",
-	"projectname": "%E6%B4%BB%E5%8A%A8%E6%8A%A5%E5%90%8D%E5%B0%8F%E5%8A%A9%E6%89%8B",
+	"projectname": "活动报名小助手（合并版V1.8_可查看参与和发起）",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

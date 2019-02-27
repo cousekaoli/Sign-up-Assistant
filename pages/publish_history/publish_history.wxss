@@ -1,1 +1,12 @@
 /* pages/publish_history/publish_history.wxss */
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+
+.button{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-content:center;
+  
+}

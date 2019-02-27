@@ -16,8 +16,8 @@
   show-location
   class='map'
   controls='{{controls}}'
+  markers="{{markers}}"
   bindcontroltap="controltap"
-></map>
-</view>
-<view class='btns'>
+>
+</map>
 </view>

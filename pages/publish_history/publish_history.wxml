@@ -1,6 +1,37 @@
 <!--pages/publish_history/publish_history.wxml-->
-<history/>
-<history/>
-<history/><history/>
+<!--pages/join_history/join_history.wxml-->
+<view class="page" bindtap='actDetails'>
+   <block wx:for="{{list}}">
+    <view class="page__bd">
+       
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__value_in-hd">{{item.actTitle}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">活动状态</view>
+                    <view class="weui-form-preview__value">{{item.actStatus}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">发起时间</view>
+                    <view class="weui-form-preview__value">{{item.createTime}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">最后更新</view>
+                    <view class="weui-form-preview__value">{{item.updateTime}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">活动类型</view>
+                    <view class="weui-form-preview__value">{{item.category}}</view>
+                </view>
+            </view>
 
-<history/>
+             <view class="weui-form-preview__ft">
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active" bindtap='shareAct'>分享</navigator>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap='deleteAct' data-actid='{{item.actId}}' data-acttitle='{{item.actTitle}}'data-index="{{index}}">删除活动</navigator>
+            </view>      
+        </view>
+    </view>
+    </block>
+</view>

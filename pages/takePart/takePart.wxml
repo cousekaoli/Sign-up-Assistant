@@ -1,0 +1,83 @@
+<page> <!--页面显示-->
+<view class="backgroundStyle">
+  <image src="/resources/signForImage.jpg" class="imageStyle"/>
+  <view class="infoStyle">
+  <!--活动主题与内容-->
+  <view class="allBox box1">
+    <text style='font-size: 16px;font-weight: bold;text-align: center;'>{{activity.activityHead.title}}</text>
+    <text >{{activity.activityHead.content}}</text>
+  </view>
+  <!--活动细节-->
+  <view class="allBox">
+    <view class="box2">
+      <text style="font-size: 16px;font-weight: bold;">活动须知</text>
+      <!--后期绑定数据显示-->
+      <text>活动类型：{{activity.activityHead.type}}</text>
+      <text>活动开始时间：{{activity.actStartTime}}</text>
+      <text>报名截止时间：{{activity.actSignupDeadline}}</text>
+      <text>活动地址：{{activity.location.address}}</text>
+      <text wx:if="{{activity.isLimitNum}}">活动参加人数：{{activity.participantsNumber}}/{{activity.maxNum}}</text>
+      <text wx:else>活动参加人数：{{activity.participantsNumber}}</text>
+
+      <text wx:if="{{activity.isPrivate}}">活动已设置权限，加入需要密码</text>
+      <text wx:else>活动未设置权限</text>
+
+      <text wx:if="{{isDelete}}">活动状态：<text style='display:inline;color:red;'>已删除</text></text>
+      <text wx:elif="{{isActivityStart}}">活动状态：<text style='display:inline; color:red;'>已过期</text></text>
+      <text wx:else>活动状态：<text style='display:inline; color:green;'>正在进行</text></text>
+
+      <text wx:if="{{isAuthorized}}">活动审核状态：<text style='display:inline; color:green;'>通过审核</text></text>
+      <text wx:else>活动审核状态：<text style='display:inline;color:red;'>未通过审核</text></text>
+
+      <text>导出报名信息</text> <!--对活动发起者可见-->
+    </view>
+    <view class="statusImage"><!-- 留插图的地方-->
+      <icon  wx:if="{{isAuthorized}}" type='success' size='80rpx'></icon>
+      <icon  wx:else type='clear' size='80rpx' color="red"></icon>
+    </view>
+  </view>
+
+  <!--对活动的操作按钮 邀请好友参加/修改活动信息/取消活动-->
+<block wx:if="{{ !isActivityStart && !isDelete }}"> <!--活动已过期或已删除，不允许操作-->
+  <button class="buttonStyle box3" wx:if="{{ !isTakePartEnd &&isAuthorized}}" open-type='share'>邀请好友参加</button> <!--在报名截止期，已授权-->
+  <view class="box4" wx:if="{{isSponsor}}"> <!--发起者才能修改-->
+    <button class="buttonStyle" plain='true' plain style="color: #32CD32; border-color: #32CD32;" bindtap='changeActivity'>修改活动信息</button>
+    <button class="buttonStyle" plain='true' plain style="color: #cc0000; border-color: #cc0000;" bindtap ='deleteActivity'>取消活动</button>
+  </view>
+</block>
+
+  <!--报名信息填写-->
+  <block>
+    <view class="allBox box5">
+      <text>请填写报名信息：</text>
+      
+       <block wx:for="{{activity.infoNeed}}" wx:for-index="index" wx:for-item="item">
+     <view  style='display: inline-block;'>
+      <input wx:if="{{item.tag}}"  value='{{item.info}}' placeholder='{{item.id}}'  bindblur= 'writerInfo' data-info-index="{{index}}"></input><!-- 使用数组-->
+    </view> 
+  </block>
+
+
+      <!--当活动过期，删除，活动人数已满不允许做操作-->
+      <block wx:if="{{!isActivityStart  && !isDelete && ((!activity.isLimitNum ) || (activity.isLimitNum  && activity.maxNum > numTakePart)) }}">
+        <!--未报名，且在报名时间内-->
+        <block wx:if="{{!isTakePart && !isTakePartEnd}}">
+        <button bindtap='takePartActivity' hover-class='none' class="button1">确认报名</button>
+        </block>
+        <view wx:else class="box6">
+          <!--使用isChangeTakePart来控制是否修改信息-->
+           <button  class="button2" bindtap="changeTakePart" wx:if="{{!isChangeTakePart}}">修改报名信息
+          </button>
+          <button wx:if="{{isChangeTakePart}}" class="button2" bindtap='submitChange'>提交修改信息</button>
+          <!--当报名截止后，不允许取消报名-->
+          <button wx:if="{{!isTakePartEnd}}" class="button3" bindtap="cancelTakePart">取消报名  </button>
+        </view>
+      </block>
+    </view>
+  </block>
+
+ 
+
+  </view>
+</view>
+</page>

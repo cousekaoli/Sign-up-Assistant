@@ -2,7 +2,7 @@ var app = getApp()
 Page({
   data:{
     cells: [
-      [{title: '个人资料', text: '', access: true, fn: 'viewPersonInfo'}],
+      
       [
         {title: '系统信息', text: '', access: true, fn: 'viewSystemInfo'},
         {title: '清除缓存', text: '', access: false, fn: 'clearStorage'}
