@@ -1,19 +1,25 @@
 <view class="main">
     <view class="search-box">
-        <input class="search-input" placeholder="搜索" value="{{value}}" bindinput="searchInput" />
+        <input class="search-input" bindinput ="searchContentSet"  value="{{value}}"  />
         <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
         <text class="search-btn" wx:if="{{showResult}}" bindtap="cancelSearch">取消</text>
+         <view class='sousuo'><text bindtap="searchContent">搜索</text></view>
     </view>
     <view class="result" wx:if="{{showResult}}">
         <view class="result-box" wx:if="{{result.length > 0}}">
             <view class="result-list" wx:for="{{result}}" wx:key="index">
                 <navigator url="{{item.url}}">
-                    <image src="{{item.thumb}}"></image>
                     <view class="result-text">
-                        <text>{{item.title}}</text>
+                        <text>活动标题：{{item.actTitle}}</text>
                     </view>
                     <view class="result-text">
-                        <text>{{item.price}}</text>
+                        <text>活动类型：{{item.category}}</text>
+                    </view>
+                    <view class="result-text">
+                        <text>地址：{{item.actAddress}}</text>
+                    </view>
+                    <view class="result-text">
+                        <text>热度：{{item.actHeat}}</text>
                     </view>
                 </navigator>
             </view>
@@ -26,12 +32,14 @@
             <view class="recommend-box">
                 <view class="result-list" wx:for="{{result}}" wx:key="index">
                     <navigator url="{{item.url}}">
-                        <image src="{{item.thumb}}"></image>
                         <view class="result-text">
-                            <text>{{item.title}}</text>
+                            <text>{{item.actTitle}}</text>
                         </view>
                         <view class="result-text">
-                            <text>{{item.price}}</text>
+                            <text>{{item.actAddress}}</text>
+                        </view>
+                          <view class="result-text">
+                            <text>{{item.actHeat}}</text>
                         </view>
                     </navigator>
                 </view>
@@ -55,9 +63,9 @@
         </view>
     </view>
 
-    <view class="keywords" wx:if="{{showKeywords}}">
+    <!-- <view class="keywords" wx:if="{{showKeywords}}">
         <view class="keywords-item" wx:for="{{keywords}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</view>
-    </view>
+    </view> -->
 
 
 </view>

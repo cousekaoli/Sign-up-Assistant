@@ -43,7 +43,7 @@
             </view>
             <view class="weui-form-preview__ft">
                
-                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" url='../hotacti/details/details?actId={{item.actId}}'>参加此活动</navigator>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" url='../takePart/takePart?actId={{item.actId}}'>参加此活动</navigator>
                 
             
             </view>

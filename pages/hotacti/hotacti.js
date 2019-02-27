@@ -1,4 +1,5 @@
 // pages/hotacti/hotacti.js
+const app = getApp();
 Page({
 
   /**
@@ -29,7 +30,8 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/applet/activity/search',
+      // url: 'http://localhost:8080/applet/activity/search',
+      url: app.serverUrl +'/applet/activity/search',
       method: "GET",
       data: {},
       success: function (res) {

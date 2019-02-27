@@ -407,7 +407,8 @@ Page({
       //当为第一次发起活动时
       if (that.data.isEdit == false) {
         wx.request({
-          url: 'http://localhost:8080/applet/activity/creation',
+          // url: 'http://localhost:8080/applet/activity/creation',
+          url: app.serverUrl +'/applet/activity/creation',
           method: 'POST',
           header: {
             'Content-Type': 'application/json'
@@ -428,7 +429,8 @@ Page({
             console.log(res),
             /*跳转到报名页*/
             wx.navigateTo({
-              url: '/pages/takePart/takePart?actId=' + res.data.extend.actId /*+ "&time=" + JSON.stringify(time)*/,
+              // url: '/pages/takePart/takePart?actId=' + res.data.extend.actId,
+              url: '/pages/takePart/takePart?actId=' + res.data.extend.actId,
             });
           }
         })
@@ -440,7 +442,8 @@ Page({
         console.log("修改活动ID")
         console.log(that.data.activity.actId)
         wx.request({
-          url: 'http://localhost:8080/applet/activity/edit/',
+          // url: 'http://localhost:8080/applet/activity/edit/',
+          url: app.serverUrl +'/applet/activity/edit/',
           method: 'Put',
           header: {
             'Content-Type': 'application/json'
@@ -524,7 +527,8 @@ Page({
     var that = this;
     // 与后台交互活动的类型，类型由后台决定
     wx.request({
-      url: 'http://localhost:8080/applet/activity/actCategories',
+      // url: 'http://localhost:8080/applet/activity/actCategories',
+      url: app.serverUrl +'/applet/activity/actCategories',
       method: 'GET',
       header: {
         'Content-Type': 'application/json'

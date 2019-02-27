@@ -71,7 +71,8 @@ Page({
     var that = this;
     // 与后台交互，地图上标点
     wx.request({
-      url: 'http://localhost:8080/applet/activityLocation/getLocations',
+      // url: 'http://localhost:8080/applet/activityLocation/getLocations',
+      url: app.serverUrl +'/applet/activityLocation/getLocations',
       method: "Post",
       header: {
         'Content-Type': 'application/json'

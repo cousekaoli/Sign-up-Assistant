@@ -1,4 +1,5 @@
 {
+  "debug": true,
   "pages": [
     "pages/index/index",
     "pages/index/search/search",
@@ -14,7 +15,6 @@
     "pages/personInfo/personInfo",
     "pages/editPersonInfo/editPersonInfo",
     "pages/systemInfo/systemInfo",
-    "pages/operation/operation",
     "pages/checkTakePart/checkTakePart"
     
   ],
@@ -33,7 +33,7 @@
       },
       {
         "pagePath": "pages/hotacti/hotacti",
-        "text": "我发起的活动",
+        "text": "热门活动",
         "iconPath": "resources/hot_t.png",
         "selectedIconPath": "resources/hot.png"
       },
@@ -56,4 +56,5 @@
       "desc": "你的位置将用于小程序位置接口的效果展示"
     }
   }
+  
 }

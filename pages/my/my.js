@@ -63,7 +63,7 @@ Page({
             console.log(ures)
             //调用后端获得微信的session_key,secret
             wx.request({
-              url: "http://localhost:8080/applet/user/wxLogin2",
+              url: app.serverUrl+"/applet/user/wxLogin2",
               method: "GET",
               data: {
                 encryptedData: ures.encryptedData,

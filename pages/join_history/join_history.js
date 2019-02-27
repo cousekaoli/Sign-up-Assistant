@@ -35,7 +35,8 @@ Page({
       userId: userId
     });
     wx.request({
-      url: 'http://localhost:8080/applet/user/lookOverUserSignup/' + userId,
+      // url: 'http://localhost:8080/applet/user/lookOverUserSignup/' + userId,
+      url: app.serverUrl +'/applet/user/lookOverUserSignup/' + userId,
       method: "GET",
       data: {},
       success: function (res) {

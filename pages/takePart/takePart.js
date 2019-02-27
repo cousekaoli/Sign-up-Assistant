@@ -167,7 +167,8 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/applet/activity/' + this.data.activity.actId + '/usersignupWithAllStatus/' + this.data.userId,
+      // url: 'http://localhost:8080/applet/activity/' + this.data.activity.actId + '/usersignupWithAllStatus/' + this.data.userId,
+      url: app.serverUrl +'/applet/activity/' + this.data.activity.actId + '/usersignupWithAllStatus/' + this.data.userId,
       method: 'GET',
       header: {
         'Content-Type': 'application/json'
@@ -381,7 +382,8 @@ Page({
         if (res.confirm) {
           //与后台交互，删除活动
           wx.request({
-            url: 'http://localhost:8080/applet/activity/delete/activity/' + that.data.activity.actId,
+            // url: 'http://localhost:8080/applet/activity/delete/activity/' + that.data.activity.actId,
+            url: app.serverUrl +'/applet/activity/delete/activity/' + that.data.activity.actId,
             method: 'GET',
             header: {
               'Content-Type': 'application/json'
@@ -561,7 +563,8 @@ Page({
 
           // 报名信息和用户ID提交给后台，并更新本地的numTakePart（已参加人数
           wx.request({
-            url: 'http://localhost:8080/applet/activitySignUp/creation/Sigup',
+            // url: 'http://localhost:8080/applet/activitySignUp/creation/Sigup',
+            url: app.serverUrl +'/applet/activitySignUp/creation/Sigup',
             method: 'Post',
             header: {
               'Content-Type': 'application/json'
@@ -729,7 +732,8 @@ Page({
           console.log(info);
           // 与后台交互信息
           wx.request({
-            url: 'http://localhost:8080/applet/activitySignUp/altering/Sigup',
+            // url: 'http://localhost:8080/applet/activitySignUp/altering/Sigup',
+            url: app.serverUrl +'/applet/activitySignUp/altering/Sigup',
             method: 'Post',
             header: {
               'Content-Type': 'application/json'
@@ -770,7 +774,8 @@ Page({
           // 提交到后台 
           wx.request({
             // 注意此处对其存在修改
-            url: 'http://localhost:8080/applet/activitySignUp/deleteSigup',
+            // url: 'http://localhost:8080/applet/activitySignUp/deleteSigup',
+            url: app.serverUrl +'/applet/activitySignUp/deleteSigup',
             method: 'Get',
             data:{
               userId: that.data.userId,

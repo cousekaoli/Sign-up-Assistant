@@ -4,7 +4,7 @@
     <view class="page__bd">
         <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
-                <view class="weui-form-preview__value_in-hd">{{item.actTitle}}</view>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" url='../takePart/takePart?actId={{item.actId}}'>{{item.actTitle}}</navigator>
             </view>
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
