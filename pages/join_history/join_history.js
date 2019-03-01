@@ -123,6 +123,10 @@ Page({
                 toastText = "取消失败";
               }
               else {
+                //缓存参与活动-1
+                var takePartNum = wx.getStorageSync("takePartNum");
+                wx.setStorageSync("takePartNum", takePartNum - 1);
+                
                 that.data.list.splice(e.target.dataset.index, 1)
                 that.setData({
                   list: that.data.list

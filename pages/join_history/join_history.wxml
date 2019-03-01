@@ -12,12 +12,12 @@
                     <view class="weui-form-preview__value">{{item.category}}</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">发起时间</view>
-                    <view class="weui-form-preview__value">{{item.createTime}}</view>
+                    <view class="weui-form-preview__label">截至时间</view>
+                    <view class="weui-form-preview__value">{{item.actSignupDeadline}}</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">更新时间</view>
-                    <view class="weui-form-preview__value">{{item.updateTime}}</view>
+                    <view class="weui-form-preview__label">开始时间</view>
+                    <view class="weui-form-preview__value">{{item.actStartTime}}</view>
                 </view>
             </view>
             <view class="weui-form-preview__ft">

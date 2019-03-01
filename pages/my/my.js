@@ -12,26 +12,13 @@ Page({
     takePartNum: 0, //用户参加的活动数量，通过与后台交互获得
     isLogIn: false, // 判断用户是否登录
 
-    backUserInfo: {}//后台得到的微信用户信息
+    backUserInfo: {},//后台得到的微信用户信息
+
+    myuserId:'' //若有缓存 则赋值
   },
   onLoad() {
-    var self = this;
-    /**
-     * 获取用户信息
-     */
-    /*
-    wx.getUserInfo({
-      success: function (res) {
-        self.setData({
-          thumb: res.userInfo.avatarUrl,
-          nickname: res.userInfo.nickName
-        })
-      }
-    })
-    */
-      /**
-       * 发起请求获取订单列表信息
-       */
+    
+      
   },   
   
   /*点击登录状态 */
@@ -89,7 +76,9 @@ Page({
 
                   //将后台返回的数据赋值给backUserInfo
                   me.setData({
-                    backUserInfo: result
+                    backUserInfo: result,
+                    myuserId: result.data.extend.userId,
+                    nickname: result.data.extend.dec_userInfo.nickName
                   })
 
                   //保存用户信息到本地缓存，可用作小程序端的拦截器
@@ -98,6 +87,34 @@ Page({
                   // wx.redirectTo({
                   //   url: '../index/index',
                   // })
+                  //查询用户参与的活动数量
+                  wx.request({                  
+                    url: app.serverUrl + '/applet/user/lookOverUserSignup/' + me.data.myuserId,
+                    method: "GET",
+                    data: {},
+                    success: function (res) {
+                      console.log(res.data.extend.signupNum)
+                      var signupNum = res.data.extend.signupNum;
+                      me.setData({
+                        takePartNum: signupNum
+                      })
+                      wx.setStorageSync("takePartNum", signupNum);//设置缓存
+                    }
+                  })
+                  //查询用户发起的活动数量
+                  wx.request({
+                    url: app.serverUrl + '/applet/user/lookOverUserCreation/' + me.data.myuserId,
+                    method: "GET",
+                    data: {},
+                    success: function (res) {
+                      console.log(res.data.extend.createNum)
+                      var createNum = res.data.extend.createNum;
+                      me.setData({
+                        addActivityNum: createNum
+                      })
+                      wx.setStorageSync("addActivityNum", createNum);//设置缓存
+                    }
+                  })
 
                 } else if (result.statusCode == 500) {
                   //登录失败
@@ -131,7 +148,40 @@ Page({
         })
       }
     })
+
+    /**
+     * 缓存中有用户信息 则直接显示 不需登录
+     */
+    
+    var userInfo = app.getGlobalUserInfo();
+    var userId = app.getGlobalUserId();
+    var takePartNum = wx.getStorageSync("takePartNum");
+    var addActivityNum = wx.getStorageSync("addActivityNum");
+    console.log("缓存中的用户信息：");
+    console.log(userInfo);
+    console.log("缓存中的用户id：");
+    console.log(userId);
+    if (userInfo !== '' && userId !== '') {
+      self.setData({
+        isLogIn: true,
+        nickname: userInfo.nickName,
+        thumb:userInfo.avatarUrl,
+        myuserId: userId,
+        takePartNum: takePartNum,
+        addActivityNum: addActivityNum
+      });
+    } else {
+      self.setData({
+        isLogIn: false,
+      });
+    }
+    
+
+
+
   },
+  
+  
   /**
    * 发起支付请求
    */
@@ -154,4 +204,5 @@ Page({
   //     }
   //   })
   // }
+  
 })

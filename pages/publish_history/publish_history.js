@@ -121,6 +121,10 @@ Page({
                 toastText = "删除失败";
               }
               else {
+                //缓存发起活动-1
+                var addActivityNum = wx.getStorageSync("addActivityNum");
+                wx.setStorageSync("addActivityNum", addActivityNum - 1);
+
                 that.data.list.splice(e.target.dataset.index, 1)
                 that.setData({
                   list: that.data.list

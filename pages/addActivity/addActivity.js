@@ -415,6 +415,9 @@ Page({
           },
           data: JSON.stringify(activitInfo),
           success: function (res) {
+            //缓存发起活动+1
+            var addActivityNum = wx.getStorageSync("addActivityNum");
+            wx.setStorageSync("addActivityNum", addActivityNum+1);
             /*
             var time = {
               dateSet1: that.data.dateSet1.selectDate,

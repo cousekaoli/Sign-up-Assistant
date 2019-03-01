@@ -389,6 +389,10 @@ Page({
               'Content-Type': 'application/json'
             },
             success: function (res) {
+              //缓存发起活动-1
+              var addActivityNum = wx.getStorageSync("addActivityNum");
+              wx.setStorageSync("addActivityNum", addActivityNum - 1);
+              
               console.log("删除成功");
               that.setData({
                 isDelete: true
@@ -573,6 +577,15 @@ Page({
             success: function (res) {
               console.log(infoNeed);
               if(res.statusCode == 200){
+                //缓存参与活动+1
+                var takePartNum = wx.getStorageSync("takePartNum");
+                wx.setStorageSync("takePartNum", takePartNum + 1);
+                //成功提示
+                wx.showToast({
+                  title: '报名成功',
+                  icon: 'success',
+                  duration: 1000
+                });
                 console.log("报名成功");
                 that.setData({
                   isTakePart: true,
@@ -743,6 +756,11 @@ Page({
               console.log("修改报名后后端返回：")
               console.log(res);
               if (res.statusCode == 200) {
+                wx.showToast({
+                  title: '修改报名成功',
+                  icon: 'success',
+                  duration: 1000
+                });
                 console.log("修改报名成功");
                 that.setData({
                   isChangeTakePart: false // 更新提交与修改的按钮控制
@@ -786,7 +804,12 @@ Page({
             },
             success: function (res) {
               if (res.statusCode == 200) {
+                //缓存参与活动-1
+                var takePartNum = wx.getStorageSync("takePartNum");
+                wx.setStorageSync("takePartNum", takePartNum - 1);
+                //成功提示
                 console.log("取消报名成功");
+                console.log(res.statusCode);
                 that.setData({
                   isTakePart: false // 修改是否报名按钮
                 });

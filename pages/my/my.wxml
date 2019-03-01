@@ -2,9 +2,8 @@
     <view class="header" >
       <block wx:if="{{isLogIn}}">
         <image src="{{thumb}}" class="thumb"></image>
-        <text class="nickname">{{nickname}}</text>
-        <!-- id便于测试 无用后删除 -->
-        <text class="activityNum">用户id:{{backUserInfo.data.extend.userId}}</text>
+        <text class="nickname">{{nickname}}{{myuserId}}</text>
+        <!-- id便于测试 无用后删除 -->      
         <text class="activityNum">我的发起：{{addActivityNum}}</text>
         <text class="activityNum">我的参与：{{takePartNum}}</text>
       </block>

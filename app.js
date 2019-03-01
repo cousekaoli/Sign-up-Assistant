@@ -4,7 +4,7 @@
 //var config = require('comm/script/config')
 App({
   //登录后可从后台获得的信息
-  serverUrl: "https://5707b157.ngrok.io", // 服务器地址
+  serverUrl: "https://1aad74f2.ngrok.io", // 服务器地址
   userInfo: null, // 用户信息
   userId: null, // 用户认证编号
 

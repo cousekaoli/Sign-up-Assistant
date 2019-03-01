@@ -2,10 +2,10 @@ let timeId = null;
 Page({
   data: {
     history: [],
-    hot: ['活动1', '活动2', '活动3'],
+    hot: ['聚餐春游', '舞会K歌', '团建联谊'],
     result: [],
     showKeywords: false,
-    keywords: ['活动'],
+    keywords: [],
     value: '',
     showResult: false,
   },
@@ -24,6 +24,7 @@ Page({
   searchContent(e) {
     var that = this;
     console.log(this.data.value);
+    this.historyHandle(this.data.value);
     wx.request({
       url: 'http://localhost:8080/applet/activity/search',
       data: {
